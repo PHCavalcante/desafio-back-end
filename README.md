@@ -113,11 +113,14 @@ Tarefas
 {
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
     "migrate": "prisma migrate dev",
+    "migrate:deploy": "prisma migrate deploy",
+    "postinstall": "prisma generate",
     "test": "vitest",
     "test:watch": "vitest --watch",
     "test:cov": "vitest run --coverage"
   }
 }
 ```
-
